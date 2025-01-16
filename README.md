@@ -1,5 +1,5 @@
-# GCP Stock Data Pipeline
-This project fetches the latest data for NDAQ from the Tiingo API, performs ETL transformations using DataProc PySpark cluster, and loads the processed data into BigQuery. This is fully automated project means no human intervention needed as I used scripts to make infra and other things in GCP.
+#  Stock Data Pipeline
+Welcome to the Stock Data Pipeline project! This fully automated pipeline fetches the latest stock data for NASDAQ (NDAQ) from the Tiingo API, performs ETL (Extract, Transform, Load) transformations using a DataProc PySpark cluster, and loads the processed data into BigQuery. The entire process is seamless and requires no manual intervention, thanks to the use of automation scripts for infrastructure setup and execution on Google Cloud Platform (GCP).
 
 ## Technologies used
 - Google Cloud Platform (GCP)
@@ -7,12 +7,34 @@ This project fetches the latest data for NDAQ from the Tiingo API, performs ETL 
 - DataProc
 - BigQuery
 
-## How to Run
-- Make a tiingo account from `api.tiingo.com` to access API to fetch data.
-- Make a service account with BigQuery and Dataproc editor or admin access, download that service account in JSON format.
-- Upload both api and service.json file keys in .env folder.
-- Now run the github action through run-scripts.yml in `.github/workflows/run-scripts.yml`
+##Requirements
+-gcsfs
+-fsspec
+-pyspark
+-pandas-datareader
+-pandas
+-google
+-google-cloud
+-python-dotenv
 
+## How to Run
+1.Tiingo API Setup:
+
+Create an account on Tiingo to obtain API access for fetching stock data.
+
+2.Service Account Setup:
+
+Create a service account with BigQuery and DataProc Editor or Admin access.
+
+Download the service account key in JSON format.
+
+3.Environment Configuration:
+
+Upload both the api key and service.json key files to the .env folder.
+
+4.Run the Pipeline:
+
+Trigger the GitHub Action through run-scripts.yml located in .github/workflows/run-scripts.yml.
 
 ## Architecture
                                 +----------------+
@@ -81,20 +103,12 @@ This project fetches the latest data for NDAQ from the Tiingo API, performs ETL 
 - Keep api_key and service_account_key safe.
 
 
-## Screen Shots
-![Screenshot (178)](https://user-images.githubusercontent.com/96521078/234498540-6f22a89f-4bbf-4ef3-84ed-74bf006160e5.png)
-![Screenshot (180)](https://user-images.githubusercontent.com/96521078/234498614-90e6424f-b22c-4fa0-a4ac-71e12986e6ac.png)
-![Screenshot (181)](https://user-images.githubusercontent.com/96521078/234498679-df642d1d-2a2c-4bbc-bf7a-bbcc95ddfde8.png)
-![Screenshot (179)](https://user-images.githubusercontent.com/96521078/234498706-6d5a58a7-7605-4b9f-bd70-e0c62a165f64.png)
-![Screenshot (177)](https://user-images.githubusercontent.com/96521078/234498756-945ae33d-75a4-434d-bc1b-97f6b82b807c.png)
+
 
 
 
 ## Contributing
 Feel free to contribute to this project by opening a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-This project is licensed under the terms of the MIT license. 
-
 ## Contact
-For any queries or suggestions, please email me at anand44rohan@gmail.com.
+For any queries or suggestions, please email me at tyagishreya2k388@gmail.com.

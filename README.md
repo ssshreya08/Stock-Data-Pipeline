@@ -7,7 +7,7 @@ Welcome to the Stock Data Pipeline project! This fully automated pipeline fetche
 - DataProc
 - BigQuery
 
-##Requirements
+## Requirements
 -gcsfs
 -fsspec
 -pyspark
